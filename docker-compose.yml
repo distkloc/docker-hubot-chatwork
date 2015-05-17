@@ -1,0 +1,23 @@
+redis:
+  image: redis:latest
+  command: redis-server --appendonly yes
+  volumes_from:
+    - storage
+
+storage:
+  image: busybox:latest
+  volumes:
+    - /data
+  
+hubot:
+  build: .
+  ports:
+    - '8190:8190'
+  environment:
+    REDIS_URL: redis://redis:6379
+    HUBOT_CHATWORK_TOKEN: 
+    HUBOT_CHATWORK_ROOMS: 
+    HUBOT_CHATWORK_API_RATE: 800
+  links:
+    - redis
+  
