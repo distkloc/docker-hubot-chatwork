@@ -1,15 +1,18 @@
 redis:
+  restart: always
   image: redis:latest
   command: redis-server --appendonly yes
   volumes_from:
     - storage
 
 storage:
+  restart: always
   image: busybox:latest
   volumes:
     - /data
   
 hubot:
+  restart: always
   build: .
   ports:
     - '8190:8190'
