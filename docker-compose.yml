@@ -20,6 +20,6 @@ hubot:
     REDIS_URL: redis://redis:6379
     HUBOT_CHATWORK_TOKEN: 
     HUBOT_CHATWORK_ROOMS: 
-    HUBOT_CHATWORK_API_RATE: 800
+    HUBOT_CHATWORK_API_RATE: 420
   links:
     - redis
