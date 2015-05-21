@@ -9,7 +9,7 @@ storage:
   restart: always
   image: busybox:latest
   volumes:
-    - /data
+    - /var/lib/redis:/data
   
 hubot:
   restart: always
@@ -23,4 +23,3 @@ hubot:
     HUBOT_CHATWORK_API_RATE: 800
   links:
     - redis
-  
