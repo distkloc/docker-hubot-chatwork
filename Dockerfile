@@ -1,10 +1,15 @@
 FROM node:latest
 
-RUN mkdir /bot && cd /bot
-ADD . /bot
+ENV BOT_HOME /bot
+
+RUN mkdir $BOT_HOME
+WORKDIR $BOT_HOME
+
+ADD ./package.json $BOT_HOME/
+RUN npm install
+
+ADD . $BOT_HOME
 
 EXPOSE 8190
-
-WORKDIR /bot
 
 CMD ["bin/hubot", "--adapter", "chatwork"]

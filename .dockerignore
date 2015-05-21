@@ -1,0 +1,10 @@
+## node
+node_modules
+
+.git
+
+## log
+.hubot_history
+
+## OSX
+.DS_Store
