@@ -15,7 +15,7 @@ hubot:
   restart: always
   build: .
   ports:
-    - '8190:8190'
+    - '8190:8080'
   environment:
     REDIS_URL: redis://redis:6379
     HUBOT_CHATWORK_TOKEN: 
