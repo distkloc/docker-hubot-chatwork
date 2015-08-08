@@ -18,6 +18,8 @@ hubot:
     - '8190:8080'
   environment:
     REDIS_URL: redis://redis:6379
+    HUBOT_NAME: 'cwbot'
+    HUBOT_ALIAS:
     HUBOT_CHATWORK_TOKEN: 
     HUBOT_CHATWORK_ROOMS: 
     HUBOT_CHATWORK_API_RATE: 420
